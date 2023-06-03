@@ -1,0 +1,1378 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DAF7925B-A86A-4EC2-AEAE-B0C086ABC6D4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NhatTrongManga</RootNamespace>
+    <AssemblyName>NhatTrongManga</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AnhBia\bongde.png" />
+    <Content Include="AnhBia\chimtronglong.jpg" />
+    <Content Include="AnhBia\chongoidacbiet.jpg" />
+    <Content Include="AnhBia\dauvattay.jpg" />
+    <Content Include="AnhBia\emgaibansao.png" />
+    <Content Include="AnhBia\flanmuonchet.jpg" />
+    <Content Include="AnhBia\friezahoisinh.png" />
+    <Content Include="AnhBia\gapnhauladoduyenso.jpg" />
+    <Content Include="AnhBia\giancachemthot.jpg" />
+    <Content Include="AnhBia\kamenriderrevice.jpg" />
+    <Content Include="AnhBia\kechennganghanhphuc.jpg" />
+    <Content Include="AnhBia\loncaiban.jpg" />
+    <Content Include="AnhBia\oantuti.jpg" />
+    <Content Include="AnhBia\quabao.jpg" />
+    <Content Include="AnhBia\quyluathethong.png" />
+    <Content Include="AnhBia\theducbuoisang.jpg" />
+    <Content Include="AnhBia\thieuniendangba.png" />
+    <Content Include="AnhBia\tutiengiadaichiensieunangluc.jpg" />
+    <Content Include="AnhBia\yeuthanky.jpg" />
+    <Content Include="AnhBia\yourname.jpg" />
+    <Content Include="AnhChapter\bongdechap11.jpg" />
+    <Content Include="AnhChapter\bongdechap110.jpg" />
+    <Content Include="AnhChapter\bongdechap111.jpg" />
+    <Content Include="AnhChapter\bongdechap112.jpg" />
+    <Content Include="AnhChapter\bongdechap113.jpg" />
+    <Content Include="AnhChapter\bongdechap114.jpg" />
+    <Content Include="AnhChapter\bongdechap115.jpg" />
+    <Content Include="AnhChapter\bongdechap116.jpg" />
+    <Content Include="AnhChapter\bongdechap12.jpg" />
+    <Content Include="AnhChapter\bongdechap13.jpg" />
+    <Content Include="AnhChapter\bongdechap14.jpg" />
+    <Content Include="AnhChapter\bongdechap15.jpg" />
+    <Content Include="AnhChapter\bongdechap16.jpg" />
+    <Content Include="AnhChapter\bongdechap17.jpg" />
+    <Content Include="AnhChapter\bongdechap18.jpg" />
+    <Content Include="AnhChapter\bongdechap19.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap11.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap110.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap111.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap112.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap113.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap114.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap115.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap116.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap117.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap118.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap119.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap12.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap120.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap121.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap13.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap14.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap15.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap16.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap17.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap18.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap19.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap21.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap210.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap211.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap212.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap213.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap214.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap215.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap216.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap217.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap218.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap219.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap22.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap220.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap221.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap222.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap23.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap24.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap25.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap26.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap27.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap28.jpg" />
+    <Content Include="AnhChapter\chimtronglongchap29.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap11.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap110.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap111.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap112.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap113.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap114.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap115.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap116.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap117.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap118.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap119.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap12.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap120.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap121.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap122.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap123.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap124.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap125.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap126.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap127.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap128.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap129.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap13.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap130.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap131.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap132.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap14.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap15.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap16.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap17.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap18.jpg" />
+    <Content Include="AnhChapter\chongoidacbietchap19.jpg" />
+    <Content Include="AnhChapter\dauvattaychap11.jpg" />
+    <Content Include="AnhChapter\dauvattaychap12.jpg" />
+    <Content Include="AnhChapter\dauvattaychap13.jpg" />
+    <Content Include="AnhChapter\dauvattaychap14.jpg" />
+    <Content Include="AnhChapter\dauvattaychap15.jpg" />
+    <Content Include="AnhChapter\dauvattaychap16.jpg" />
+    <Content Include="AnhChapter\dauvattaychap17.jpg" />
+    <Content Include="AnhChapter\dauvattaychap18.jpg" />
+    <Content Include="AnhChapter\dauvattaychap19.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap11.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap12.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap13.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap14.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap21.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap22.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap23.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap24.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap25.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap31.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap32.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap33.jpg" />
+    <Content Include="AnhChapter\emgaibansaochap34.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap11.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap110.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap111.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap112.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap113.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap114.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap115.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap116.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap117.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap118.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap119.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap12.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap120.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap121.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap122.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap123.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap124.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap125.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap126.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap127.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap13.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap14.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap15.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap16.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap17.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap18.jpg" />
+    <Content Include="AnhChapter\flanmuonchetchap19.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap11.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap110.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap111.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap112.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap113.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap114.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap115.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap116.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap117.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap118.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap119.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap12.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap120.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap121.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap122.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap123.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap124.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap125.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap126.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap127.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap128.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap129.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap13.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap130.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap131.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap14.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap15.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap16.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap17.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap18.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap19.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap21.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap210.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap211.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap212.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap213.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap214.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap215.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap216.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap217.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap218.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap219.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap22.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap220.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap221.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap222.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap223.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap224.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap225.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap226.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap227.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap228.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap229.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap23.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap230.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap24.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap25.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap26.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap27.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap28.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap29.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap31.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap310.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap311.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap312.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap313.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap314.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap315.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap316.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap317.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap318.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap319.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap32.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap320.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap321.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap322.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap323.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap324.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap325.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap326.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap327.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap328.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap329.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap33.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap330.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap331.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap34.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap35.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap36.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap37.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap38.jpg" />
+    <Content Include="AnhChapter\friezahoisinhchap39.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap11.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap110.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap111.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap112.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap113.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap114.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap115.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap116.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap117.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap118.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap119.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap12.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap120.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap121.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap122.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap123.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap124.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap125.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap126.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap127.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap128.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap129.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap13.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap130.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap131.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap132.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap133.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap134.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap135.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap14.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap15.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap16.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap17.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap18.jpg" />
+    <Content Include="AnhChapter\gapnhauladoduyensochap19.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap11.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap110.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap111.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap112.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap113.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap114.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap115.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap116.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap117.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap12.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap13.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap14.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap15.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap16.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap17.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap18.jpg" />
+    <Content Include="AnhChapter\giancachemthotchap19.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap11.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap110.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap111.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap112.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap113.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap114.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap115.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap116.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap117.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap118.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap119.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap12.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap120.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap13.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap14.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap15.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap16.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap17.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap18.jpg" />
+    <Content Include="AnhChapter\kamenriderrevicechap19.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap11.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap110.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap12.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap13.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap14.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap15.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap16.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap17.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap18.jpg" />
+    <Content Include="AnhChapter\kechennganghanhphucchap19.jpg" />
+    <Content Include="AnhChapter\loncaibanchap11.jpg" />
+    <Content Include="AnhChapter\loncaibanchap110.jpg" />
+    <Content Include="AnhChapter\loncaibanchap111.jpg" />
+    <Content Include="AnhChapter\loncaibanchap12.jpg" />
+    <Content Include="AnhChapter\loncaibanchap13.jpg" />
+    <Content Include="AnhChapter\loncaibanchap14.jpg" />
+    <Content Include="AnhChapter\loncaibanchap15.jpg" />
+    <Content Include="AnhChapter\loncaibanchap16.jpg" />
+    <Content Include="AnhChapter\loncaibanchap17.jpg" />
+    <Content Include="AnhChapter\loncaibanchap18.jpg" />
+    <Content Include="AnhChapter\loncaibanchap19.jpg" />
+    <Content Include="AnhChapter\oantutichap11.jpg" />
+    <Content Include="AnhChapter\oantutichap110.jpg" />
+    <Content Include="AnhChapter\oantutichap12.jpg" />
+    <Content Include="AnhChapter\oantutichap13.jpg" />
+    <Content Include="AnhChapter\oantutichap14.jpg" />
+    <Content Include="AnhChapter\oantutichap15.jpg" />
+    <Content Include="AnhChapter\oantutichap16.jpg" />
+    <Content Include="AnhChapter\oantutichap17.jpg" />
+    <Content Include="AnhChapter\oantutichap18.jpg" />
+    <Content Include="AnhChapter\oantutichap19.jpg" />
+    <Content Include="AnhChapter\quabaochap11.jpg" />
+    <Content Include="AnhChapter\quabaochap110.jpg" />
+    <Content Include="AnhChapter\quabaochap12.jpg" />
+    <Content Include="AnhChapter\quabaochap13.jpg" />
+    <Content Include="AnhChapter\quabaochap14.jpg" />
+    <Content Include="AnhChapter\quabaochap15.jpg" />
+    <Content Include="AnhChapter\quabaochap16.jpg" />
+    <Content Include="AnhChapter\quabaochap17.jpg" />
+    <Content Include="AnhChapter\quabaochap18.jpg" />
+    <Content Include="AnhChapter\quabaochap19.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap11.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap110.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap111.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap112.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap113.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap114.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap115.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap116.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap117.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap118.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap119.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap12.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap120.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap121.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap122.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap123.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap124.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap125.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap126.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap127.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap128.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap129.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap13.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap130.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap131.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap132.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap133.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap134.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap135.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap136.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap137.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap138.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap139.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap14.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap15.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap16.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap17.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap18.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap19.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap21.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap210.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap211.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap212.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap213.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap214.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap215.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap216.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap217.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap218.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap219.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap22.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap220.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap221.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap222.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap223.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap224.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap225.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap226.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap227.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap228.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap229.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap23.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap230.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap231.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap232.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap233.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap234.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap235.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap236.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap237.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap238.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap239.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap24.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap240.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap241.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap242.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap243.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap244.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap245.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap246.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap247.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap248.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap249.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap25.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap250.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap251.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap252.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap253.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap254.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap255.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap256.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap257.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap258.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap259.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap26.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap260.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap27.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap28.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap29.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap31.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap310.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap311.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap312.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap313.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap314.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap315.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap316.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap317.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap318.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap319.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap32.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap320.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap321.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap322.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap323.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap324.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap325.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap326.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap327.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap328.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap329.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap33.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap330.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap331.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap332.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap333.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap334.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap335.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap336.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap337.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap34.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap35.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap36.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap37.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap38.jpg" />
+    <Content Include="AnhChapter\quyluathethongchap39.jpg" />
+    <Content Include="AnhChapter\theducbuoisangchap11.jpg" />
+    <Content Include="AnhChapter\theducbuoisangchap12.jpg" />
+    <Content Include="AnhChapter\theducbuoisangchap13.jpg" />
+    <Content Include="AnhChapter\theducbuoisangchap14.jpg" />
+    <Content Include="AnhChapter\theducbuoisangchap15.jpg" />
+    <Content Include="AnhChapter\theducbuoisangchap16.jpg" />
+    <Content Include="AnhChapter\theducbuoisangchap17.jpg" />
+    <Content Include="AnhChapter\theducbuoisangchap18.jpg" />
+    <Content Include="AnhChapter\theducbuoisangchap19.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap11.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap110.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap111.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap112.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap113.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap114.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap115.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap116.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap117.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap118.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap119.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap12.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap120.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap121.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap122.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap123.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap124.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap125.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap126.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap127.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap128.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap129.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap13.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap130.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap131.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap132.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap133.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap134.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap135.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap136.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap137.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap138.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap139.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap14.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap140.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap141.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap142.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap143.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap144.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap145.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap146.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap147.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap148.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap149.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap15.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap150.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap151.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap152.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap153.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap154.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap155.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap156.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap157.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap158.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap159.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap16.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap17.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap18.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap19.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap21.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap210.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap211.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap212.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap213.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap214.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap215.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap216.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap217.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap218.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap219.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap22.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap220.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap221.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap222.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap223.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap224.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap225.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap23.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap24.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap25.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap26.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap27.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap28.jpg" />
+    <Content Include="AnhChapter\thieuniendangbachap29.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap11.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap110.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap111.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap112.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap113.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap114.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap115.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap116.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap117.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap118.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap119.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap12.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap120.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap121.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap122.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap123.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap124.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap125.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap126.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap127.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap128.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap129.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap13.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap130.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap131.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap132.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap133.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap134.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap135.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap136.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap137.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap138.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap139.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap14.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap140.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap141.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap142.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap143.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap144.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap145.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap146.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap147.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap148.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap149.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap15.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap16.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap17.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap18.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap19.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap21.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap210.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap211.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap212.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap213.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap214.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap215.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap216.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap217.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap218.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap219.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap22.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap220.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap221.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap222.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap223.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap224.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap225.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap226.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap227.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap228.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap229.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap23.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap230.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap231.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap232.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap233.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap234.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap235.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap236.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap24.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap25.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap26.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap27.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap28.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap29.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap31.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap310.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap311.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap312.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap313.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap314.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap315.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap316.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap317.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap318.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap319.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap32.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap320.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap321.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap322.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap323.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap324.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap325.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap326.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap327.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap328.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap329.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap33.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap330.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap331.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap332.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap333.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap334.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap335.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap336.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap337.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap338.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap339.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap34.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap340.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap341.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap342.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap343.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap344.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap345.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap35.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap36.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap37.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap38.jpg" />
+    <Content Include="AnhChapter\tutiengiadaichiensieunanglucchap39.jpg" />
+    <Content Include="AnhChapter\yeuthankychap11.jpg" />
+    <Content Include="AnhChapter\yeuthankychap110.jpg" />
+    <Content Include="AnhChapter\yeuthankychap111.jpg" />
+    <Content Include="AnhChapter\yeuthankychap112.jpg" />
+    <Content Include="AnhChapter\yeuthankychap113.jpg" />
+    <Content Include="AnhChapter\yeuthankychap114.jpg" />
+    <Content Include="AnhChapter\yeuthankychap12.jpg" />
+    <Content Include="AnhChapter\yeuthankychap13.jpg" />
+    <Content Include="AnhChapter\yeuthankychap14.jpg" />
+    <Content Include="AnhChapter\yeuthankychap15.jpg" />
+    <Content Include="AnhChapter\yeuthankychap16.jpg" />
+    <Content Include="AnhChapter\yeuthankychap17.jpg" />
+    <Content Include="AnhChapter\yeuthankychap18.jpg" />
+    <Content Include="AnhChapter\yeuthankychap19.jpg" />
+    <Content Include="AnhChapter\yeuthankychap21.jpg" />
+    <Content Include="AnhChapter\yeuthankychap210.jpg" />
+    <Content Include="AnhChapter\yeuthankychap211.jpg" />
+    <Content Include="AnhChapter\yeuthankychap212.jpg" />
+    <Content Include="AnhChapter\yeuthankychap213.jpg" />
+    <Content Include="AnhChapter\yeuthankychap22.jpg" />
+    <Content Include="AnhChapter\yeuthankychap23.jpg" />
+    <Content Include="AnhChapter\yeuthankychap24.jpg" />
+    <Content Include="AnhChapter\yeuthankychap25.jpg" />
+    <Content Include="AnhChapter\yeuthankychap26.jpg" />
+    <Content Include="AnhChapter\yeuthankychap27.jpg" />
+    <Content Include="AnhChapter\yeuthankychap28.jpg" />
+    <Content Include="AnhChapter\yeuthankychap29.jpg" />
+    <Content Include="AnhChapter\yeuthankychap31.jpg" />
+    <Content Include="AnhChapter\yeuthankychap310.jpg" />
+    <Content Include="AnhChapter\yeuthankychap311.jpg" />
+    <Content Include="AnhChapter\yeuthankychap312.jpg" />
+    <Content Include="AnhChapter\yeuthankychap313.jpg" />
+    <Content Include="AnhChapter\yeuthankychap314.jpg" />
+    <Content Include="AnhChapter\yeuthankychap315.jpg" />
+    <Content Include="AnhChapter\yeuthankychap316.jpg" />
+    <Content Include="AnhChapter\yeuthankychap32.jpg" />
+    <Content Include="AnhChapter\yeuthankychap33.jpg" />
+    <Content Include="AnhChapter\yeuthankychap34.jpg" />
+    <Content Include="AnhChapter\yeuthankychap35.jpg" />
+    <Content Include="AnhChapter\yeuthankychap36.jpg" />
+    <Content Include="AnhChapter\yeuthankychap37.jpg" />
+    <Content Include="AnhChapter\yeuthankychap38.jpg" />
+    <Content Include="AnhChapter\yeuthankychap39.jpg" />
+    <Content Include="AnhChapter\yournamechap11.jpg" />
+    <Content Include="AnhChapter\yournamechap110.jpg" />
+    <Content Include="AnhChapter\yournamechap111.jpg" />
+    <Content Include="AnhChapter\yournamechap112.jpg" />
+    <Content Include="AnhChapter\yournamechap113.jpg" />
+    <Content Include="AnhChapter\yournamechap114.jpg" />
+    <Content Include="AnhChapter\yournamechap115.jpg" />
+    <Content Include="AnhChapter\yournamechap116.jpg" />
+    <Content Include="AnhChapter\yournamechap117.jpg" />
+    <Content Include="AnhChapter\yournamechap118.jpg" />
+    <Content Include="AnhChapter\yournamechap119.jpg" />
+    <Content Include="AnhChapter\yournamechap12.jpg" />
+    <Content Include="AnhChapter\yournamechap120.jpg" />
+    <Content Include="AnhChapter\yournamechap121.jpg" />
+    <Content Include="AnhChapter\yournamechap122.jpg" />
+    <Content Include="AnhChapter\yournamechap123.jpg" />
+    <Content Include="AnhChapter\yournamechap124.jpg" />
+    <Content Include="AnhChapter\yournamechap125.jpg" />
+    <Content Include="AnhChapter\yournamechap126.jpg" />
+    <Content Include="AnhChapter\yournamechap127.jpg" />
+    <Content Include="AnhChapter\yournamechap128.jpg" />
+    <Content Include="AnhChapter\yournamechap129.jpg" />
+    <Content Include="AnhChapter\yournamechap13.jpg" />
+    <Content Include="AnhChapter\yournamechap130.jpg" />
+    <Content Include="AnhChapter\yournamechap131.jpg" />
+    <Content Include="AnhChapter\yournamechap132.jpg" />
+    <Content Include="AnhChapter\yournamechap133.jpg" />
+    <Content Include="AnhChapter\yournamechap134.jpg" />
+    <Content Include="AnhChapter\yournamechap135.jpg" />
+    <Content Include="AnhChapter\yournamechap136.jpg" />
+    <Content Include="AnhChapter\yournamechap137.jpg" />
+    <Content Include="AnhChapter\yournamechap138.jpg" />
+    <Content Include="AnhChapter\yournamechap139.jpg" />
+    <Content Include="AnhChapter\yournamechap14.jpg" />
+    <Content Include="AnhChapter\yournamechap140.jpg" />
+    <Content Include="AnhChapter\yournamechap141.jpg" />
+    <Content Include="AnhChapter\yournamechap142.jpg" />
+    <Content Include="AnhChapter\yournamechap143.jpg" />
+    <Content Include="AnhChapter\yournamechap144.jpg" />
+    <Content Include="AnhChapter\yournamechap145.jpg" />
+    <Content Include="AnhChapter\yournamechap146.jpg" />
+    <Content Include="AnhChapter\yournamechap147.jpg" />
+    <Content Include="AnhChapter\yournamechap148.jpg" />
+    <Content Include="AnhChapter\yournamechap149.jpg" />
+    <Content Include="AnhChapter\yournamechap15.jpg" />
+    <Content Include="AnhChapter\yournamechap150.jpg" />
+    <Content Include="AnhChapter\yournamechap151.jpg" />
+    <Content Include="AnhChapter\yournamechap152.jpg" />
+    <Content Include="AnhChapter\yournamechap153.jpg" />
+    <Content Include="AnhChapter\yournamechap154.jpg" />
+    <Content Include="AnhChapter\yournamechap155.jpg" />
+    <Content Include="AnhChapter\yournamechap156.jpg" />
+    <Content Include="AnhChapter\yournamechap16.jpg" />
+    <Content Include="AnhChapter\yournamechap17.jpg" />
+    <Content Include="AnhChapter\yournamechap18.jpg" />
+    <Content Include="AnhChapter\yournamechap19.jpg" />
+    <Content Include="AnhChapter\yournamechap21.jpg" />
+    <Content Include="AnhChapter\yournamechap210.jpg" />
+    <Content Include="AnhChapter\yournamechap211.jpg" />
+    <Content Include="AnhChapter\yournamechap212.jpg" />
+    <Content Include="AnhChapter\yournamechap213.jpg" />
+    <Content Include="AnhChapter\yournamechap214.jpg" />
+    <Content Include="AnhChapter\yournamechap215.jpg" />
+    <Content Include="AnhChapter\yournamechap216.jpg" />
+    <Content Include="AnhChapter\yournamechap217.jpg" />
+    <Content Include="AnhChapter\yournamechap218.jpg" />
+    <Content Include="AnhChapter\yournamechap219.jpg" />
+    <Content Include="AnhChapter\yournamechap22.jpg" />
+    <Content Include="AnhChapter\yournamechap220.jpg" />
+    <Content Include="AnhChapter\yournamechap221.jpg" />
+    <Content Include="AnhChapter\yournamechap222.jpg" />
+    <Content Include="AnhChapter\yournamechap223.jpg" />
+    <Content Include="AnhChapter\yournamechap224.jpg" />
+    <Content Include="AnhChapter\yournamechap225.jpg" />
+    <Content Include="AnhChapter\yournamechap226.jpg" />
+    <Content Include="AnhChapter\yournamechap227.jpg" />
+    <Content Include="AnhChapter\yournamechap228.jpg" />
+    <Content Include="AnhChapter\yournamechap229.jpg" />
+    <Content Include="AnhChapter\yournamechap23.jpg" />
+    <Content Include="AnhChapter\yournamechap230.jpg" />
+    <Content Include="AnhChapter\yournamechap231.jpg" />
+    <Content Include="AnhChapter\yournamechap232.jpg" />
+    <Content Include="AnhChapter\yournamechap233.jpg" />
+    <Content Include="AnhChapter\yournamechap234.jpg" />
+    <Content Include="AnhChapter\yournamechap235.jpg" />
+    <Content Include="AnhChapter\yournamechap236.jpg" />
+    <Content Include="AnhChapter\yournamechap237.jpg" />
+    <Content Include="AnhChapter\yournamechap238.jpg" />
+    <Content Include="AnhChapter\yournamechap239.jpg" />
+    <Content Include="AnhChapter\yournamechap24.jpg" />
+    <Content Include="AnhChapter\yournamechap240.jpg" />
+    <Content Include="AnhChapter\yournamechap241.jpg" />
+    <Content Include="AnhChapter\yournamechap242.jpg" />
+    <Content Include="AnhChapter\yournamechap243.jpg" />
+    <Content Include="AnhChapter\yournamechap244.jpg" />
+    <Content Include="AnhChapter\yournamechap245.jpg" />
+    <Content Include="AnhChapter\yournamechap246.jpg" />
+    <Content Include="AnhChapter\yournamechap247.jpg" />
+    <Content Include="AnhChapter\yournamechap248.jpg" />
+    <Content Include="AnhChapter\yournamechap249.jpg" />
+    <Content Include="AnhChapter\yournamechap25.jpg" />
+    <Content Include="AnhChapter\yournamechap250.jpg" />
+    <Content Include="AnhChapter\yournamechap251.jpg" />
+    <Content Include="AnhChapter\yournamechap252.jpg" />
+    <Content Include="AnhChapter\yournamechap253.jpg" />
+    <Content Include="AnhChapter\yournamechap254.jpg" />
+    <Content Include="AnhChapter\yournamechap255.jpg" />
+    <Content Include="AnhChapter\yournamechap256.jpg" />
+    <Content Include="AnhChapter\yournamechap257.jpg" />
+    <Content Include="AnhChapter\yournamechap258.jpg" />
+    <Content Include="AnhChapter\yournamechap259.jpg" />
+    <Content Include="AnhChapter\yournamechap26.jpg" />
+    <Content Include="AnhChapter\yournamechap27.jpg" />
+    <Content Include="AnhChapter\yournamechap28.jpg" />
+    <Content Include="AnhChapter\yournamechap29.jpg" />
+    <Content Include="AnhChapter\yournamechap31.jpg" />
+    <Content Include="AnhChapter\yournamechap310.jpg" />
+    <Content Include="AnhChapter\yournamechap311.jpg" />
+    <Content Include="AnhChapter\yournamechap312.jpg" />
+    <Content Include="AnhChapter\yournamechap313.jpg" />
+    <Content Include="AnhChapter\yournamechap314.jpg" />
+    <Content Include="AnhChapter\yournamechap315.jpg" />
+    <Content Include="AnhChapter\yournamechap316.jpg" />
+    <Content Include="AnhChapter\yournamechap317.jpg" />
+    <Content Include="AnhChapter\yournamechap318.jpg" />
+    <Content Include="AnhChapter\yournamechap319.jpg" />
+    <Content Include="AnhChapter\yournamechap32.jpg" />
+    <Content Include="AnhChapter\yournamechap320.jpg" />
+    <Content Include="AnhChapter\yournamechap321.jpg" />
+    <Content Include="AnhChapter\yournamechap322.jpg" />
+    <Content Include="AnhChapter\yournamechap323.jpg" />
+    <Content Include="AnhChapter\yournamechap324.jpg" />
+    <Content Include="AnhChapter\yournamechap325.jpg" />
+    <Content Include="AnhChapter\yournamechap326.jpg" />
+    <Content Include="AnhChapter\yournamechap327.jpg" />
+    <Content Include="AnhChapter\yournamechap328.jpg" />
+    <Content Include="AnhChapter\yournamechap329.jpg" />
+    <Content Include="AnhChapter\yournamechap33.jpg" />
+    <Content Include="AnhChapter\yournamechap330.jpg" />
+    <Content Include="AnhChapter\yournamechap331.jpg" />
+    <Content Include="AnhChapter\yournamechap332.jpg" />
+    <Content Include="AnhChapter\yournamechap333.jpg" />
+    <Content Include="AnhChapter\yournamechap334.jpg" />
+    <Content Include="AnhChapter\yournamechap335.jpg" />
+    <Content Include="AnhChapter\yournamechap336.jpg" />
+    <Content Include="AnhChapter\yournamechap337.jpg" />
+    <Content Include="AnhChapter\yournamechap338.jpg" />
+    <Content Include="AnhChapter\yournamechap339.jpg" />
+    <Content Include="AnhChapter\yournamechap34.jpg" />
+    <Content Include="AnhChapter\yournamechap340.jpg" />
+    <Content Include="AnhChapter\yournamechap341.jpg" />
+    <Content Include="AnhChapter\yournamechap342.jpg" />
+    <Content Include="AnhChapter\yournamechap343.jpg" />
+    <Content Include="AnhChapter\yournamechap344.jpg" />
+    <Content Include="AnhChapter\yournamechap345.jpg" />
+    <Content Include="AnhChapter\yournamechap346.jpg" />
+    <Content Include="AnhChapter\yournamechap347.jpg" />
+    <Content Include="AnhChapter\yournamechap348.jpg" />
+    <Content Include="AnhChapter\yournamechap349.jpg" />
+    <Content Include="AnhChapter\yournamechap35.jpg" />
+    <Content Include="AnhChapter\yournamechap350.jpg" />
+    <Content Include="AnhChapter\yournamechap351.jpg" />
+    <Content Include="AnhChapter\yournamechap352.jpg" />
+    <Content Include="AnhChapter\yournamechap353.jpg" />
+    <Content Include="AnhChapter\yournamechap36.jpg" />
+    <Content Include="AnhChapter\yournamechap37.jpg" />
+    <Content Include="AnhChapter\yournamechap38.jpg" />
+    <Content Include="AnhChapter\yournamechap39.jpg" />
+    <Content Include="Admin\Chapter.aspx" />
+    <Content Include="Admin\ChangePassword.aspx" />
+    <Content Include="ChangePassword.txt" />
+    <Content Include="css\bootstrap-grid.css" />
+    <Content Include="css\bootstrap-grid.min.css" />
+    <Content Include="css\bootstrap-grid.rtl.css" />
+    <Content Include="css\bootstrap-grid.rtl.min.css" />
+    <Content Include="css\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap-reboot.min.css" />
+    <Content Include="css\bootstrap-reboot.rtl.css" />
+    <Content Include="css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="css\bootstrap-utilities.css" />
+    <Content Include="css\bootstrap-utilities.min.css" />
+    <Content Include="css\bootstrap-utilities.rtl.css" />
+    <Content Include="css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap.rtl.css" />
+    <Content Include="css\bootstrap.rtl.min.css" />
+    <Content Include="css\ThisIsCss.css" />
+    <Content Include="DangKy.aspx" />
+    <Content Include="ForgotPassword.txt" />
+    <Content Include="Login.aspx" />
+    <Content Include="DocTruyen.aspx" />
+    <Content Include="Admin\HinhAnhChap.aspx" />
+    <Content Include="ImageButton\CHAPTER.png" />
+    <Content Include="ImageButton\HinhAnhChap.png" />
+    <Content Include="ImageButton\KeyWordTruyen.png" />
+    <Content Include="ImageButton\NguoiDung.png" />
+    <Content Include="ImageButton\nhattrongmangapt2.png" />
+    <Content Include="ImageButton\TacGia.png" />
+    <Content Include="ImageButton\TheLoai.png" />
+    <Content Include="ImageButton\TheoDoi.png" />
+    <Content Include="ImageButton\Truyen.png" />
+    <Content Include="ImageButton\Truyen_tg.png" />
+    <Content Include="ImageButton\Truyen_tl.png" />
+    <Content Include="js\bootstrap.bundle.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.esm.js" />
+    <Content Include="js\bootstrap.esm.min.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="Admin\KeywordTruyen.aspx" />
+    <Content Include="Admin\NguoiDung.aspx" />
+    <Content Include="QuenMatKhau.aspx" />
+    <Content Include="Admin\TacGia.aspx" />
+    <Content Include="Admin\TheLoai.aspx" />
+    <Content Include="Admin\ThemChapter.aspx" />
+    <Content Include="Admin\ThemHinhAnhChapter.aspx" />
+    <Content Include="Admin\ThemKeywordTruyen.aspx" />
+    <Content Include="Admin\ThemNguoiDung.aspx" />
+    <Content Include="Admin\ThemTacGia.aspx" />
+    <Content Include="Admin\ThemTheLoai.aspx" />
+    <Content Include="Admin\ThemTheoDoi.aspx" />
+    <Content Include="Admin\ThemTruyen.aspx" />
+    <Content Include="Admin\ThemTruyen_TG.aspx" />
+    <Content Include="Admin\ThemTruyen_TL.aspx" />
+    <Content Include="Admin\TheoDoi.aspx" />
+    <Content Include="Register.txt" />
+    <Content Include="TimTheLoai.aspx" />
+    <Content Include="Admin\Truyen.aspx" />
+    <Content Include="TruyenTheoDoi.aspx" />
+    <Content Include="ThongTin.aspx" />
+    <Content Include="TimKiem.aspx" />
+    <Content Include="TrangChu.aspx" />
+    <Content Include="Admin\Truyen_TG.aspx" />
+    <Content Include="Admin\Truyen_TL.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XemChiTiet.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Chapter.aspx.cs">
+      <DependentUpon>Chapter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Chapter.aspx.designer.cs">
+      <DependentUpon>Chapter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DangKy.aspx.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKy.aspx.designer.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocTruyen.aspx.cs">
+      <DependentUpon>DocTruyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocTruyen.aspx.designer.cs">
+      <DependentUpon>DocTruyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HinhAnhChap.aspx.cs">
+      <DependentUpon>HinhAnhChap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HinhAnhChap.aspx.designer.cs">
+      <DependentUpon>HinhAnhChap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\KeywordTruyen.aspx.cs">
+      <DependentUpon>KeywordTruyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\KeywordTruyen.aspx.designer.cs">
+      <DependentUpon>KeywordTruyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.master.cs">
+      <DependentUpon>Main.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.master.designer.cs">
+      <DependentUpon>Main.master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NguoiDung.aspx.cs">
+      <DependentUpon>NguoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NguoiDung.aspx.designer.cs">
+      <DependentUpon>NguoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuenMatKhau.aspx.cs">
+      <DependentUpon>QuenMatKhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuenMatKhau.aspx.designer.cs">
+      <DependentUpon>QuenMatKhau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TacGia.aspx.cs">
+      <DependentUpon>TacGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TacGia.aspx.designer.cs">
+      <DependentUpon>TacGia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TheLoai.aspx.cs">
+      <DependentUpon>TheLoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TheLoai.aspx.designer.cs">
+      <DependentUpon>TheLoai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemChapter.aspx.cs">
+      <DependentUpon>ThemChapter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemChapter.aspx.designer.cs">
+      <DependentUpon>ThemChapter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemHinhAnhChapter.aspx.cs">
+      <DependentUpon>ThemHinhAnhChapter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemHinhAnhChapter.aspx.designer.cs">
+      <DependentUpon>ThemHinhAnhChapter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemKeywordTruyen.aspx.cs">
+      <DependentUpon>ThemKeywordTruyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemKeywordTruyen.aspx.designer.cs">
+      <DependentUpon>ThemKeywordTruyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemNguoiDung.aspx.cs">
+      <DependentUpon>ThemNguoiDung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemNguoiDung.aspx.designer.cs">
+      <DependentUpon>ThemNguoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemTacGia.aspx.cs">
+      <DependentUpon>ThemTacGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemTacGia.aspx.designer.cs">
+      <DependentUpon>ThemTacGia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemTheLoai.aspx.cs">
+      <DependentUpon>ThemTheLoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemTheLoai.aspx.designer.cs">
+      <DependentUpon>ThemTheLoai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemTheoDoi.aspx.cs">
+      <DependentUpon>ThemTheoDoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemTheoDoi.aspx.designer.cs">
+      <DependentUpon>ThemTheoDoi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemTruyen.aspx.cs">
+      <DependentUpon>ThemTruyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemTruyen.aspx.designer.cs">
+      <DependentUpon>ThemTruyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemTruyen_TG.aspx.cs">
+      <DependentUpon>ThemTruyen_TG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemTruyen_TG.aspx.designer.cs">
+      <DependentUpon>ThemTruyen_TG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ThemTruyen_TL.aspx.cs">
+      <DependentUpon>ThemTruyen_TL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ThemTruyen_TL.aspx.designer.cs">
+      <DependentUpon>ThemTruyen_TL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TheoDoi.aspx.cs">
+      <DependentUpon>TheoDoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TheoDoi.aspx.designer.cs">
+      <DependentUpon>TheoDoi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimTheLoai.aspx.cs">
+      <DependentUpon>TimTheLoai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimTheLoai.aspx.designer.cs">
+      <DependentUpon>TimTheLoai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Truyen.aspx.cs">
+      <DependentUpon>Truyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Truyen.aspx.designer.cs">
+      <DependentUpon>Truyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TruyenTheoDoi.aspx.cs">
+      <DependentUpon>TruyenTheoDoi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TruyenTheoDoi.aspx.designer.cs">
+      <DependentUpon>TruyenTheoDoi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTin.aspx.cs">
+      <DependentUpon>ThongTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThongTin.aspx.designer.cs">
+      <DependentUpon>ThongTin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem.aspx.cs">
+      <DependentUpon>TimKiem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimKiem.aspx.designer.cs">
+      <DependentUpon>TimKiem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.aspx.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrangChu.aspx.designer.cs">
+      <DependentUpon>TrangChu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Truyen_TG.aspx.cs">
+      <DependentUpon>Truyen_TG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Truyen_TG.aspx.designer.cs">
+      <DependentUpon>Truyen_TG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Truyen_TL.aspx.cs">
+      <DependentUpon>Truyen_TL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Truyen_TL.aspx.designer.cs">
+      <DependentUpon>Truyen_TL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XemChiTiet.aspx.cs">
+      <DependentUpon>XemChiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XemChiTiet.aspx.designer.cs">
+      <DependentUpon>XemChiTiet.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Main.master" />
+    <Content Include="css\bootstrap-grid.css.map" />
+    <Content Include="css\bootstrap-grid.min.css.map" />
+    <Content Include="css\bootstrap-grid.rtl.css.map" />
+    <Content Include="css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="css\bootstrap-reboot.css.map" />
+    <Content Include="css\bootstrap-reboot.min.css.map" />
+    <Content Include="css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="css\bootstrap-utilities.css.map" />
+    <Content Include="css\bootstrap-utilities.min.css.map" />
+    <Content Include="css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="css\bootstrap.rtl.css.map" />
+    <Content Include="css\bootstrap.rtl.min.css.map" />
+    <Content Include="js\bootstrap.bundle.js.map" />
+    <Content Include="js\bootstrap.bundle.min.js.map" />
+    <Content Include="js\bootstrap.esm.js.map" />
+    <Content Include="js\bootstrap.esm.min.js.map" />
+    <Content Include="js\bootstrap.js.map" />
+    <Content Include="js\bootstrap.min.js.map" />
+    <Content Include="Admin\Web.config" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64728</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64728/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

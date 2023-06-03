@@ -1,0 +1,28 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="HinhAnhChap.aspx.cs" Inherits="NhatTrongManga.HinhAnhChap" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <p class="auto-style8" style="font-size: x-large; color: #000000; background-color: #FFFFFF;">
+        DỮ LIỆU HÌNH ẢNH CHAPTER</p>
+    <p>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/ThemHinhAnhChapter.aspx">Thêm hình ảnh chapter</asp:HyperLink>
+    </p>
+    <p>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="auto-style9" DataKeyNames="MaChap" DataSourceID="SqlDataSource1" AllowPaging="True" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+            <Columns>
+                <asp:BoundField DataField="MaChap" HeaderText="Mã Chapter" SortExpression="MaChap" />
+                <asp:BoundField DataField="HinhAnh" HeaderText="Hình ảnh" SortExpression="HinhAnh" />
+                <asp:BoundField DataField="GhiChu" HeaderText="Ghi chú" SortExpression="GhiChu" />
+            </Columns>
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+            <RowStyle BackColor="White" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NhatTrongManga %>" SelectCommand="SELECT * FROM [HinhAnhChap]">
+        </asp:SqlDataSource>
+    </p>
+</asp:Content>

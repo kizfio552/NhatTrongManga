@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="NhatTrongManga.Main" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/ThisIsCss.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" integrity="sha512-ykRBEJhyZ+B/BIJcBuOyUoIxh0OfdICfHPnPfBy7eIiyJv536ojTCsgX8aqrLQ9VJZHGz4tvYyzOM0lkgmQZGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title></title>
+    <style type="text/css">
+        .auto-style4 {
+            width: 292px;
+            background-color: #333333;
+        }
+
+        .auto-style5 {
+            text-align: right;
+            background-color: #333333;
+        }
+
+        .auto-style6 {
+            text-align: center;
+            background-color: #333333;
+        }
+
+        .auto-style7 {
+            height: 26px;
+            background-color: #333333;
+        }
+
+        .auto-style8 {
+            height: 26px;
+            width: 547px;
+            color: #FFFFFF;
+            background-color: #333333;
+        }
+
+        .auto-style9 {
+            height: 26px;
+            text-align: right;
+            color: #FFFFFF;
+            background-color: #333333;
+        }
+        .auto-style10 {
+            background-color: #666666;
+            height: 20px !important;
+        }
+    </style>
+</head>
+<body>
+<%--    <form action="TimKiem.aspx" method="post">
+        <input type="submit" name="name" value="" />
+    </form>--%>
+    <form id="form1" runat="server" method="post">
+        <table style="width: 100%;">
+            <tr>
+                <td class="auto-style4">
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="72px" ImageUrl="~/ImageButton/nhattrongmangapt2.png" PostBackUrl="~/TrangChu.aspx" Width="331px" />
+                </td>
+                <td class="auto-style6">
+                    <asp:TextBox CssClass="m-2" ID="txtTimKiem" runat="server" Width="450px"></asp:TextBox>
+                    <asp:LinkButton CssClass="search link-dark" ID="btnTimKiem" runat="server" Text="<i class='fas fa-search'></i>" PostBackUrl="~/TimKiem.aspx" />
+                </td>
+                <td class="auto-style5">
+                    <asp:LoginStatus CssClass="link-info" ID="LoginStatus1" runat="server" LoginText="Đăng nhập" LogoutAction="Redirect" LogoutPageUrl="~/TrangChu.aspx" LogoutText="Đăng xuất" />
+                    <asp:LoginName CssClass="text-info" ID="LoginName1" runat="server" />
+                </td>
+            </tr>
+            <tr style="height: 50px">
+                <td colspan="3" class="auto-style10">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/TrangChu.aspx" Text="Trang chủ" Value="TrangChu"></asp:MenuItem>
+                            <asp:MenuItem Text="Thể loại <i class='fas fa-caret-down'></i>" Value="TheLoai">
+                                <asp:MenuItem ToolTip="Action" NavigateUrl="~/TimTheLoai.aspx?key=Action" Text="Action" Value="Action"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Adventure" NavigateUrl="~/TimTheLoai.aspx?key=Adventure" Text="Adventure" Value="Adventure"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Comedy" NavigateUrl="~/TimTheLoai.aspx?key=Comedy" Text="Comedy" Value="Comedy"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Drama" NavigateUrl="~/TimTheLoai.aspx?key=Drama" Text="Drama" Value="Drama"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Full Color" NavigateUrl="~/TimTheLoai.aspx?key=FullColor" Text="FullColor" Value="FullColor"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Harem" NavigateUrl="~/TimTheLoai.aspx?key=Harem" Text="Harem" Value="Harem"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Horror" NavigateUrl="~/TimTheLoai.aspx?key=Horror" Text="Horror" Value="Horror"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Isekai" NavigateUrl="~/TimTheLoai.aspx?key=Isekai" Text="Isekai" Value="Isekai"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Manhua" NavigateUrl="~/TimTheLoai.aspx?key=Manhua" Text="Manhua" Value="Manhua"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Manhwa" NavigateUrl="~/TimTheLoai.aspx?key=Manhwa" Text="Manhwa" Value="Manhwa"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="One Shot" NavigateUrl="~/TimTheLoai.aspx?key=OneShot" Text="OneShot" Value="OneShot"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="Romance" NavigateUrl="~/TimTheLoai.aspx?key=Romance" Text="Romance" Value="Romance"></asp:MenuItem>
+                                <asp:MenuItem ToolTip="School Life" NavigateUrl="~/TimTheLoai.aspx?key=SchoolLife" Text="SchoolLife" Value="SchoolLife"></asp:MenuItem>
+                            </asp:MenuItem> 
+                            <asp:MenuItem NavigateUrl="~/TruyenTheoDoi.aspx" Text="Theo dõi" Value="TheoDoi"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ThongTin.aspx" Text="Thông tin" Value="ThongTin"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>                   
+                </td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    <footer style="margin-top: 10px">
+        <table style="width: 100%; border-collapse:collapse">
+            <tr>
+                <td class="auto-style8">
+                    <asp:ImageButton ID="ImageButton2" runat="server" Height="72px" ImageUrl="~/ImageButton/nhattrongmangapt2.png" PostBackUrl="~/TrangChu.aspx" Width="331px" />
+                    <br />
+                    Email: kizfio552@gmail.com<br />
+                    Website được thực hiện bởi Nguyễn Minh Trọng và Lê Đình Nhật</td>
+                <td class="auto-style7"></td>
+                <td class="auto-style9">Đồ án môn học Lập trình Web do thầy Tô Oai Hùng giảng dạy<br />
+                    Mọi thông tin và hình ảnh trên website đều được sưu tầm trên Internet. Chúng tôi không sở hữu hay chịu trách nhiệm bất kì thông tin nào trên web này. Nếu làm ảnh hưởng đến cá nhân hay tổ chức nào, khi được yêu cầu, chúng tôi sẽ xem xét và gỡ bỏ ngay lập tức.</td>
+            </tr>
+        </table>
+    </footer>       
+    </form>
+    </body>
+</html>
+

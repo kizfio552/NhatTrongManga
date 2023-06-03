@@ -1,0 +1,6 @@
+Cám ơn bạn đã đăng ký!
+Tên và mật khẩu của bạn là:
+	username: <% UserName %>
+	password: <% Password %>
+Để đổi mật khẩu xin vui lòng truy cập vào tab Thông tin và nhấn nút Đổi mật khẩu sau khi đã đăng nhập!
+Chúc bạn có khoảng thời gian đọc truyện vui vẻ!
